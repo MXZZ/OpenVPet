@@ -26,17 +26,17 @@ jobs:
       - name: Download build files
         uses: actions/upload-artifact@v3
         with:
-            path: .pio/build/esp32dev/firmware.bin
+            path: .pio/build/esp32dev-ttgo/firmware.bin
             name: firmware.bin
       - name: Download partition files
         uses: actions/upload-artifact@v3
         with:
-            path: .pio/build/esp32dev/partitions.bin
+            path: .pio/build/esp32dev-ttgo/partitions.bin
             name: partitions.bin
       - name: Download bootloader files
         uses: actions/upload-artifact@v3
         with:
-            path: .pio/build/esp32dev/bootloader.bin
+            path: .pio/build/esp32dev-ttgo/bootloader.bin
             name: bootloader.bin      
             
             
