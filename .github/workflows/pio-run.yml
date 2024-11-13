@@ -23,8 +23,14 @@ jobs:
         run: pip install --upgrade platformio
       - name: Build PlatformIO Project
         run: pio run -e ${{ matrix.pio-env }}
-      - name: Download build files
+      - name: Upload build files
         uses: actions/upload-artifact@v3
         with:
           path: .pio/build/esp32dev/firmware.bin
           name: firmware.bin
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          path: .pio/build/esp32dev/firmware.bin
+          name: firmware.bin
+         
