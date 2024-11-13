@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         pio-env:
-          - esp32dev
+          - esp32dev-ttgo
 
     steps:
       - uses: actions/checkout@v3
