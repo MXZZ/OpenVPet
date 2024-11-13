@@ -26,5 +26,10 @@ jobs:
       - name: Download build files
         uses: actions/upload-artifact@v3
         with:
-          path: .pio/build/esp32dev/firmware.bin
-          name: firmware.bin
+        path: .pio/build/esp32dev/firmware.bin
+        name: firmware.bin
+      - name: Download partition files
+        uses: actions/upload-artifact@v3
+        with:
+        path: .pio/build/esp32dev/partitions.bin
+        name: partitions.bin
